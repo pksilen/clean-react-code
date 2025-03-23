@@ -20,7 +20,7 @@
     "esModuleInterop": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "types": ["jest", "@testing-library/jest-dom"],
+    "types": ["@testing-library/jest-dom"],
 
     /* Linting */
     "strict": true,

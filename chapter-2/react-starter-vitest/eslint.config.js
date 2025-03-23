@@ -1,4 +1,5 @@
 import eslint from '@eslint/js';
+import vitestPlugin from '@vitest/eslint-plugin';
 import jsxA11yPlugin from 'eslint-plugin-jsx-a11y';
 import playwrightPlugin from 'eslint-plugin-playwright';
 import reactPlugin from 'eslint-plugin-react';
@@ -8,7 +9,6 @@ import * as regexpPlugin from 'eslint-plugin-regexp';
 import testingLibraryPlugin from 'eslint-plugin-testing-library';
 import globals from 'globals';
 import tsEslint from 'typescript-eslint';
-import vitestPlugin from "@vitest/eslint-plugin";
 
 export default tsEslint.config(
   { ignores: ['dist'] },
@@ -198,9 +198,7 @@ export default tsEslint.config(
     }
   },
   {
-    extends: [
-      testingLibraryPlugin.configs['flat/react']
-    ],
+    extends: [testingLibraryPlugin.configs['flat/react']],
     files: ['src/**/*.test.{ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2020,
@@ -221,7 +219,7 @@ export default tsEslint.config(
       vitest: vitestPlugin
     },
     rules: {
-      ...vitest.configs.recommended.rules,
+      ...vitestPlugin.configs.recommended.rules,
       'testing-library/prefer-explicit-assert': 'error',
       'testing-library/prefer-query-matchers': 'error',
       'testing-library/prefer-user-event': 'error',
