@@ -1,5 +1,4 @@
 import eslint from '@eslint/js';
-import vitestPlugin from '@vitest/eslint-plugin';
 import jestPlugin from 'eslint-plugin-jest';
 import jsxA11yPlugin from 'eslint-plugin-jsx-a11y';
 import playwrightPlugin from 'eslint-plugin-playwright';
@@ -221,11 +220,9 @@ export default tsEslint.config(
     },
     plugins: {
       jest: jestPlugin,
-      'testing-library': testingLibraryPlugin,
-      vitest: vitestPlugin
+      'testing-library': testingLibraryPlugin
     },
     rules: {
-      ...vitestPlugin.configs.recommended.rules,
       'jest/consistent-test-it': ['error', { fn: 'it' }],
       'jest/max-expects': ['error', { max: 2 }],
       'jest/no-conditional-in-test': 'error',
@@ -251,39 +248,7 @@ export default tsEslint.config(
       'jest/require-to-throw-message': 'error',
       'testing-library/prefer-explicit-assert': 'error',
       'testing-library/prefer-query-matchers': 'error',
-      'testing-library/prefer-user-event': 'error',
-      'vitest/consistent-test-it': ['error', { fn: 'it' }],
-      'vitest/max-expects': ['error', { max: 2 }],
-      'vitest/no-alias-methods': 'error',
-      'vitest/no-conditional-expect': 'error',
-      'vitest/no-conditional-in-test': 'error',
-      'vitest/no-conditional-tests': 'error',
-      'vitest/no-disabled-tests': 'error',
-      'vitest/no-duplicate-hooks': 'error',
-      'vitest/no-focused-tests': 'error',
-      'vitest/no-standalone-expect': 'error',
-      'vitest/no-test-return-statement': 'error',
-      'vitest/prefer-called-with': 'error',
-      'vitest/prefer-comparison-matcher': 'error',
-      'vitest/prefer-each': 'error',
-      'vitest/prefer-equality-matcher': 'error',
-      'vitest/prefer-expect-assertions': 'error',
-      'vitest/prefer-expect-resolves': 'error',
-      'vitest/prefer-hooks-in-order': 'error',
-      'vitest/prefer-hooks-on-top': 'error',
-      'vitest/prefer-mock-promise-shorthand': 'error',
-      'vitest/prefer-spy-on': 'error',
-      'vitest/prefer-strict-boolean-matchers': 'error',
-      'vitest/prefer-strict-equal': 'error',
-      'vitest/prefer-to-be': 'error',
-      'vitest/prefer-to-be-object': 'error',
-      'vitest/prefer-to-contain': 'error',
-      'vitest/prefer-to-have-length': 'error',
-      'vitest/prefer-todo': 'error',
-      'vitest/prefer-vi-mocked': 'error',
-      'vitest/require-hook': 'error',
-      'vitest/require-mock-type-parameters': 'error',
-      'vitest/require-to-throw-message': 'error'
+      'testing-library/prefer-user-event': 'error'
     }
   },
   {

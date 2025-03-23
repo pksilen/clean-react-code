@@ -29,7 +29,6 @@
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
     "@vitejs/plugin-react": "^4.3.4",
-    "@vitest/eslint-plugin": "^1.1.32-beta.1",
     "babel-plugin-react-compiler": "^19.0.0-beta-714736e-20250131",
     "eslint": "^9.20.1",
     "eslint-plugin-jest": "^28.11.0",
@@ -48,7 +47,6 @@
     "ts-jest": "^29.2.5",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.22.0",
-    "vite": "^6.1.0",
-    "vitest": "^3.0.6"
+    "vite": "^6.1.0"
   }
 }
